@@ -20,14 +20,13 @@ namespace Prestadito.Investment.Application.Manager.Validators
     {
         public CreateFinancingValidator()
         {
-            RuleFor(x => x.StrEmail)
-                .NotEmpty().WithMessage(ConstantMessages.Validator.PROPERTY_NAME_IS_EMPTY)
-                .EmailAddress().WithMessage(ConstantMessages.Validator.EMAIL_NOT_VAlID);
-
-            RuleFor(x => x.StrPassword)
+            RuleFor(x => x.IntLoanTerm)
                 .NotEmpty().WithMessage(ConstantMessages.Validator.PROPERTY_NAME_IS_EMPTY);
 
-            RuleFor(x => x.StrRolId)
+            RuleFor(x => x.StrLoanId)
+                .NotEmpty().WithMessage(ConstantMessages.Validator.PROPERTY_NAME_IS_EMPTY);
+
+            RuleFor(x => x.StrBorrowerId)
                 .NotEmpty().WithMessage(ConstantMessages.Validator.PROPERTY_NAME_IS_EMPTY);
         }
     }
@@ -39,10 +38,13 @@ namespace Prestadito.Investment.Application.Manager.Validators
             RuleFor(x => x.StrId)
                 .NotEmpty().WithMessage(ConstantMessages.Validator.PROPERTY_NAME_IS_EMPTY);
 
-            RuleFor(x => x.StrPassword)
+            RuleFor(x => x.IntLoanTerm)
                 .NotEmpty().WithMessage(ConstantMessages.Validator.PROPERTY_NAME_IS_EMPTY);
 
-            RuleFor(x => x.StrRolId)
+            RuleFor(x => x.StrLoanId)
+                .NotEmpty().WithMessage(ConstantMessages.Validator.PROPERTY_NAME_IS_EMPTY);
+
+            RuleFor(x => x.StrBorrowerId)
                 .NotEmpty().WithMessage(ConstantMessages.Validator.PROPERTY_NAME_IS_EMPTY);
         }
     }
