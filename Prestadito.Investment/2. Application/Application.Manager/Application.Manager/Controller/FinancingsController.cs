@@ -12,7 +12,6 @@ using Prestadito.Investment.Application.Manager.Utilities;
 using Prestadito.Investment.Domain.MainModule.Entities;
 using Prestadito.Investment.Infrastructure.Data.Constants;
 using Prestadito.Investment.Infrastructure.Data.Interface;
-using Prestadito.Investment.Infrastructure.Data.Utilities;
 
 namespace Prestadito.Investment.Application.Manager.Controller
 {
@@ -122,7 +121,7 @@ namespace Prestadito.Investment.Application.Manager.Controller
 
             entity.BlnActive = dto.BlnActive;
             entity.DteUpdatedAt = DateTime.Now;
-            entity.StrUpdateFinancing = ConstantAPI.System.SYSTEM_USER;
+            entity.StrUpdateUser = ConstantAPI.System.SYSTEM_USER;
 
             var updateDefinition = FinancingQueryBuilder.UpdateFinancing(entity);
             var isFinancingUpdated = await _financingRepository.UpdateOneAsync(filterDefinition, updateDefinition);

@@ -16,7 +16,7 @@ namespace Prestadito.Investment.Application.Manager.QueryBuilder.UpdateDefinitio
             var update = Builders<FinancingEntity>.Update
                 .Set(u => u.BlnActive, entity.BlnActive)
                 .Set(u => u.DteUpdatedAt, entity.DteUpdatedAt)
-                .Set(u => u.StrUpdateFinancing, entity.StrUpdateFinancing);
+                .Set(u => u.StrUpdateUser, entity.StrUpdateUser);
             return update;
         }
     }

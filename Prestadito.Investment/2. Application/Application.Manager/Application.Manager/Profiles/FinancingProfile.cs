@@ -16,7 +16,7 @@ namespace Prestadito.Investment.Application.Manager.Profiles
         {
             CreateMap<CreateFinancingRequest, FinancingEntity>()
                 .ForMember(dest => dest.BlnActive, opt => opt.MapFrom(src => true))
-                .ForMember(dest => dest.StrCreateFinancing, opt => opt.MapFrom(src => ConstantAPI.System.SYSTEM_USER));
+                .ForMember(dest => dest.StrCreateUser, opt => opt.MapFrom(src => ConstantAPI.System.SYSTEM_USER));
 
             CreateMap<FinancingEntity, CreateFinancingResponse>()
                 .ForMember(dest => dest.StrId, opt => opt.MapFrom(src => src.Id));
